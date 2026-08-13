@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import RelatedTools from "@/components/RelatedTools";
 
 export default function PasswordGenerator() {
   const [length, setLength] = useState(12);
@@ -75,3 +76,7 @@ export default function PasswordGenerator() {
     </div>
   );
 }
+<RelatedTools
+  currentSlug="/password-generator"
+  category="utilities"
+/>

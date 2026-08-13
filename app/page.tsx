@@ -36,34 +36,26 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 bg-white border-b">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-3xl font-bold">
-            <span className="text-[#E5322D]">Tool</span>
-            <span>Verse</span>
-          </Link>
-
-          <nav className="hidden md:flex gap-8 font-medium text-gray-700">
-            <a href="#tools">Tools</a>
-            <a href="#categories">Categories</a>
-            <a href="#features">Features</a>
-          </nav>
-        </div>
-      </header>
 
       {/* Hero */}
-      <section className="bg-[#FFF5F5] py-20 px-6">
+      <section className="bg-[#FFF5F5] py-6 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             This Website Created By,
-            <span className="text-[#E5322D]"> Parnika Awasthi</span>
+            <span className="text-[#E5322D]"> Parnika</span>
           </h1>
+          {/* <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+  Every Tool You Need
+  <span className="text-[#E5322D]">
+    {" "}In One Place
+  </span>
+</h1> */}
 
           <p className="text-lg text-gray-600 mb-10">
-            Free online calculators, finance tools, student tools,
-            health tools and utilities to make your work easier.
-          </p>
+  Free calculators, finance tools, student tools,
+  QR generators, password generators and many
+  more utilities available instantly.
+</p>
 
           <div className="max-w-xl mx-auto relative">
             <Search
@@ -80,10 +72,8 @@ export default function Home() {
 />
           </div>
         </div>
-      </section>
-
-      {/* Stats */}
-      <section className="max-w-6xl mx-auto px-6 py-12">
+        {/* Stats */}
+      {/* <section className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white rounded-xl p-5 shadow text-center">
             <h3 className="text-2xl font-bold text-[#E5322D]">
@@ -113,10 +103,13 @@ export default function Home() {
             <p>Signup Required</p>
           </div>
         </div>
+      </section> */}
       </section>
 
+      
+
       {/* Popular Tools */}
-      <section id="tools" className="max-w-7xl mx-auto px-6 py-20">
+      <section id="tools" className="max-w-7xl mx-auto px-6 py-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold">
             Popular Tools
@@ -127,22 +120,35 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredTools.map((tool) => (
-            <Link
-              key={tool.slug}
-              href={tool.slug}
-              className="border rounded-2xl p-6 bg-white hover:border-[#E5322D] hover:shadow-xl transition-all duration-300"
-            >
-              <h3 className="font-semibold text-lg">
-                {tool.name}
-              </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {filteredTools.map((tool) => {
+  const Icon = tool.icon;
 
-              <p className="text-gray-500 mt-2 text-sm">
-                {tool.description}
-              </p>
-            </Link>
-          ))}
+  return (
+    <Link
+      key={tool.slug}
+      href={tool.slug}
+      className="group border rounded-3xl p-6 bg-white hover:border-[#E5322D] hover:shadow-xl transition-all duration-300"
+    >
+      <div className="mb-4">
+        <div className="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center">
+          <Icon
+            size={28}
+            className="text-[#E5322D]"
+          />
+        </div>
+      </div>
+
+      <h3 className="text-xl font-bold mb-2 group-hover:text-[#E5322D]">
+        {tool.name}
+      </h3>
+
+      <p className="text-gray-500 leading-7">
+        {tool.description}
+      </p>
+    </Link>
+  );
+})}
           {filteredTools.length === 0 && (
   <div className="text-center mt-8 text-gray-500">
     No tools found.
@@ -206,7 +212,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+  <h2 className="text-3xl font-bold mb-6">
+    Free Online Tools for Everyday Use
+  </h2>
+
+  <p className="text-gray-600 leading-8">
+    ToolVerse is a free online platform offering calculators,
+    finance tools, student tools, utility tools and productivity
+    tools. Our mission is to provide fast, accurate and easy-to-use
+    tools without requiring registration. Whether you need to
+    calculate EMI, generate passwords, create QR codes, count words
+    or calculate CGPA, ToolVerse helps you get results instantly.
+  </p>
+</section>
+<section className="max-w-6xl mx-auto px-6 py-16">
+  <h2 className="text-3xl font-bold mb-6">
+    Popular Online Calculators
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-4">
+    <Link href="/emi-calculator">EMI Calculator</Link>
+    <Link href="/gst-calculator">GST Calculator</Link>
+    <Link href="/loan-calculator">Loan Calculator</Link>
+    <Link href="/cgpa-calculator">CGPA Calculator</Link>
+    <Link href="/password-generator">Password Generator</Link>
+    <Link href="/qr-generator">QR Generator</Link>
+  </div>
+</section>
+{/* CTA */}
       <section className="bg-[#E5322D] text-white py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">
@@ -219,88 +253,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="text-2xl font-bold mb-3">
-                ToolVerse
-              </h4>
-
-              <p className="text-gray-400 leading-7">
-                Free online calculators, finance tools,
-                student tools and utilities.
-              </p>
-            </div>
-
-            <div>
-              <h5 className="font-semibold text-lg mb-4">
-                Quick Links
-              </h5>
-
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="/about">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/contact">Contact Us</Link>
-                </li>
-                <li>
-                  <Link href="/privacy-policy">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms-and-conditions">
-                    Terms & Conditions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/disclaimer">
-                    Disclaimer
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h5 className="font-semibold text-lg mb-4">
-                Categories
-              </h5>
-
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="/tools/student">
-                    Student Tools
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/finance">
-                    Finance Tools
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/health">
-                    Health Tools
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/utilities">
-                    Utility Tools
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-10 pt-6 text-center">
-            <p className="text-gray-500 text-sm">
-              © 2026 ToolVerse. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

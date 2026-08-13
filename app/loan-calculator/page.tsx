@@ -1,6 +1,9 @@
 "use client";
 
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedTools from "@/components/RelatedTools";
 import { useState } from "react";
+import FAQSection from "@/components/FAQSection";
 
 export default function LoanCalculator() {
   const [loanAmount, setLoanAmount] = useState("");
@@ -27,18 +30,27 @@ export default function LoanCalculator() {
     const totalPay = emiValue * months;
     const totalInt = totalPay - P;
 
-    setEmi(emiValue);
-    setTotalPayment(totalPay);
-    setTotalInterest(totalInt);
+    setEmi(Number(emiValue.toFixed(2)));
+    setTotalPayment(Number(totalPay.toFixed(2)));
+    setTotalInterest(Number(totalInt.toFixed(2)));
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12">
-      <h1 className="text-4xl font-bold text-center mb-8">
-        Loan Calculator
-      </h1>
+    <main className="min-h-screen bg-gray-50 py-10 px-4">
+      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-6">
 
-      <div className="bg-white shadow-lg rounded-2xl p-6">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Finance", href: "/tools/finance" },
+            { label: "Loan Calculator" },
+          ]}
+        />
+
+        <h1 className="text-4xl font-bold text-center mb-8 text-[#E5322D]">
+          Loan Calculator
+        </h1>
+
         <div className="space-y-4">
 
           <div>
@@ -99,7 +111,7 @@ export default function LoanCalculator() {
               </h3>
 
               <p className="text-xl font-bold text-[#E5322D]">
-                ₹{emi.toFixed(2)}
+                ₹ {emi.toLocaleString()}
               </p>
             </div>
 
@@ -109,7 +121,7 @@ export default function LoanCalculator() {
               </h3>
 
               <p className="text-xl font-bold text-[#E5322D]">
-                ₹{totalInterest?.toFixed(2)}
+                ₹ {totalInterest?.toLocaleString()}
               </p>
             </div>
 
@@ -119,12 +131,50 @@ export default function LoanCalculator() {
               </h3>
 
               <p className="text-xl font-bold text-[#E5322D]">
-                ₹{totalPayment?.toFixed(2)}
+                ₹ {totalPayment?.toLocaleString()}
               </p>
             </div>
           </div>
         )}
+
+        <div className="mt-10">
+          <h2 className="text-xl font-bold mb-3">
+            How to Use Loan Calculator?
+          </h2>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-600">
+            <li>Enter loan amount.</li>
+            <li>Enter annual interest rate.</li>
+            <li>Enter loan tenure in months.</li>
+            <li>Click Calculate Loan.</li>
+          </ul>
+        </div>
+
       </div>
-    </div>
+
+      <RelatedTools
+        currentSlug="/loan-calculator"
+        category="finance"
+      />
+     <FAQSection
+  faqs={[
+    {
+      question: "What does a loan calculator do?",
+      answer:
+        "It helps estimate EMI, total interest and total repayment amount."
+    },
+    {
+      question: "Does interest rate affect EMI?",
+      answer:
+        "Yes, a higher interest rate increases the EMI amount."
+    },
+    {
+      question: "Can I use this calculator for home loans?",
+      answer:
+        "Yes, it can be used for home loans, personal loans and other EMI-based loans."
+    },
+  ]}
+/>
+         </main>
   );
 }

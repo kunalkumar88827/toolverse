@@ -1,6 +1,10 @@
 "use client";
 
+import Breadcrumb from "@/components/Breadcrumb";
 import { useState } from "react";
+import RelatedTools from "@/components/RelatedTools";
+import FAQSection from "@/components/FAQSection";
+
 
 export default function EmiCalculatorPage() {
   const [loanAmount, setLoanAmount] = useState("");
@@ -35,6 +39,13 @@ export default function EmiCalculatorPage() {
   return (
     <main className="min-h-screen bg-gray-50 py-10 px-4">
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-md p-6">
+         <Breadcrumb
+      items={[
+        { label: "Home", href: "/" },
+        { label: "Finance", href: "/tools/finance" },
+        { label: "EMI Calculator" },
+      ]}
+    />
         <h1 className="text-3xl font-bold text-center text-[#E5322D] mb-2">
           EMI Calculator
         </h1>
@@ -114,6 +125,30 @@ export default function EmiCalculatorPage() {
           </ul>
         </div>
       </div>
+      <RelatedTools
+      currentSlug="/emi-calculator"
+      category="finance"
+    />
+    <FAQSection
+  faqs={[
+    {
+      question: "What is EMI?",
+      answer:
+        "EMI (Equated Monthly Installment) is the fixed amount paid every month to repay a loan."
+    },
+    {
+      question: "Does a higher tenure reduce EMI?",
+      answer:
+        "Yes, increasing the loan tenure generally reduces the monthly EMI amount."
+    },
+    {
+      question: "Is this EMI calculator free?",
+      answer:
+        "Yes, ToolVerse EMI Calculator is completely free to use."
+    },
+  ]}
+/>
     </main>
   );
+  
 }
