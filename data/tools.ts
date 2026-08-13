@@ -2,62 +2,92 @@ export const tools = [
   {
     name: "Percentage Calculator",
     slug: "/percentage-calculator",
-    category: "Student Tools",
+    category: "student",
+    description: "Calculate percentage instantly.",
+    popular: true,
+  },
+  {
+    name: "Attendance Calculator",
+    slug: "/attendance-calculator",
+    category: "student",
+    description: "Calculate attendance percentage.",
     popular: true,
   },
   {
     name: "Age Calculator",
     slug: "/age-calculator",
-    category: "Calculator Tools",
-    popular: true,
-  },
-  {
-    name: "Attendance Calculator",
-    slug: "/attendance-calculator",
-    category: "Student Tools",
+    category: "calculator",
+    description: "Calculate your exact age instantly.",
     popular: true,
   },
   {
     name: "GST Calculator",
     slug: "/gst-calculator",
-    category: "Calculator Tools",
+    category: "calculator",
+    description: "Calculate GST amount quickly.",
     popular: true,
   },
   {
     name: "Discount Calculator",
     slug: "/discount-calculator",
-    category: "Calculator Tools",
+    category: "calculator",
+    description: "Calculate discount and final price.",
     popular: true,
-  },
-
-  {
-    name: "Percentage Calculator",
-    slug: "/percentage-calculator",
-    category: "student",
-    description: "Calculate percentage instantly."
-  },
-  {
-    name: "Attendance Calculator",
-    slug: "/attendance-calculator",
-    category: "student",
-    description: "Calculate attendance percentage."
   },
   {
     name: "EMI Calculator",
     slug: "/emi-calculator",
     category: "finance",
-    description: "Calculate loan EMI."
+    description: "Calculate loan EMI instantly.",
+    popular: true,
   },
   {
     name: "SIP Calculator",
     slug: "/sip-calculator",
     category: "finance",
-    description: "Estimate SIP returns."
+    description: "Estimate SIP returns and maturity value.",
+    popular: true,
   },
   {
     name: "BMI Calculator",
     slug: "/bmi-calculator",
     category: "health",
-    description: "Check body mass index."
+    description: "Check your body mass index.",
+    popular: true,
   },
+  {
+  name: "Unit Converter",
+  slug: "/unit-converter",
+  category: "utilities",
+  description: "Convert length, weight and temperature units.",
+  popular: true,
+},
+{
+  name: "CGPA Calculator",
+  slug: "/cgpa-calculator",
+  category: "student",
+  description: "Calculate CGPA and percentage.",
+  popular: true,
+},
+{
+  name: "Password Generator",
+  slug: "/password-generator",
+  category: "utilities",
+  description: "Generate secure random passwords.",
+  popular: true,
+},  
+{
+  name: "QR Code Generator",
+  slug: "/qr-generator",
+  category: "utilities",
+  description: "Generate and download QR codes instantly.",
+  popular: true,
+},
+{
+  name: "Loan Calculator",
+  slug: "/loan-calculator",
+  category: "finance",
+  description: "Calculate loan EMI, interest and total payment.",
+  popular: true,
+},
 ];

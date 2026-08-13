@@ -12,19 +12,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "ToolVerse - Free Online Tools",
+export const metadata: Metadata = {
+  title: {
+    default: "ToolVerse - Free Online Tools",
+    template: "%s | ToolVerse",
+  },
   description:
-    "Free online calculators, student tools, PDF tools and utilities.",
+    "Free online calculators, finance tools, student tools, health tools and utilities.",
+  keywords: [
+    "online tools",
+    "calculator",
+    "student tools",
+    "finance tools",
+    "GST calculator",
+    "EMI calculator",
+    "BMI calculator",
+    "password generator",
+  ],
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }
