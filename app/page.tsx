@@ -56,8 +56,8 @@ export default function Home() {
       <section className="bg-[#FFF5F5] py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Every Tool You Need,
-            <span className="text-[#E5322D]"> Free Forever</span>
+            This Website Created By,
+            <span className="text-[#E5322D]"> Parnika Awasthi</span>
           </h1>
 
           <p className="text-lg text-gray-600 mb-10">
