@@ -95,6 +95,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+  <div className="bg-white rounded-xl p-5 shadow">
+    <h3 className="text-2xl font-bold text-[#E5322D]">10+</h3>
+    <p>Free Tools</p>
+  </div>
+
+  <div className="bg-white rounded-xl p-5 shadow">
+    <h3 className="text-2xl font-bold text-[#E5322D]">100%</h3>
+    <p>Free to Use</p>
+  </div>
+
+  <div className="bg-white rounded-xl p-5 shadow">
+    <h3 className="text-2xl font-bold text-[#E5322D]">24/7</h3>
+    <p>Available</p>
+  </div>
+
+  <div className="bg-white rounded-xl p-5 shadow">
+    <h3 className="text-2xl font-bold text-[#E5322D]">No</h3>
+    <p>Signup Required</p>
+  </div>
+</div>
 
       {/* Popular Tools */}
       <section id="tools" className="max-w-7xl mx-auto px-6 py-20">
