@@ -201,21 +201,95 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black text-white py-10">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h4 className="text-2xl font-bold mb-3">
-            ToolVerse
-          </h4>
+      <footer className="bg-black text-white py-12">
+  <div className="max-w-7xl mx-auto px-6">
 
-          <p className="text-gray-400">
-            Every Tool You Need, Free Forever.
-          </p>
+    <div className="grid md:grid-cols-3 gap-8">
 
-          <p className="text-gray-500 mt-4 text-sm">
-            © 2026 ToolVerse. All Rights Reserved.
-          </p>
-        </div>
-      </footer>
+      {/* Brand */}
+      <div>
+        <h4 className="text-2xl font-bold mb-3">
+          ToolVerse
+        </h4>
+
+        <p className="text-gray-400 leading-7">
+          Free online calculators, student tools,
+          finance tools and utilities to help you
+          solve everyday problems quickly.
+        </p>
+      </div>
+
+      {/* Quick Links */}
+      <div>
+        <h5 className="font-semibold text-lg mb-4">
+          Quick Links
+        </h5>
+
+        <ul className="space-y-2 text-gray-400">
+          <li>
+            <Link href="/about">About Us</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link href="/privacy-policy">
+              Privacy Policy
+            </Link>
+          </li>
+          <li>
+            <Link href="/terms-and-conditions">
+              Terms & Conditions
+            </Link>
+          </li>
+          <li>
+            <Link href="/disclaimer">
+              Disclaimer
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Categories */}
+      <div>
+        <h5 className="font-semibold text-lg mb-4">
+          Categories
+        </h5>
+
+        <ul className="space-y-2 text-gray-400">
+          <li>
+            <Link href="/tools/student">
+              Student Tools
+            </Link>
+          </li>
+          <li>
+            <Link href="/tools/finance">
+              Finance Tools
+            </Link>
+          </li>
+          <li>
+            <Link href="/tools/health">
+              Health Tools
+            </Link>
+          </li>
+          <li>
+            <Link href="/tools/utilities">
+              Utility Tools
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div className="border-t border-gray-800 mt-10 pt-6 text-center">
+      <p className="text-gray-500 text-sm">
+        © 2026 ToolVerse. All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
     </main>
   );
 } 
