@@ -90,4 +90,18 @@ export const tools = [
   description: "Calculate loan EMI, interest and total payment.",
   popular: true,
 },
+{
+  name: "Word Counter",
+  slug: "/word-counter",
+  category: "utilities",
+  description: "Count words, characters, sentences and paragraphs instantly.",
+  popular: true,
+},
+{
+  name: "Text Case Converter",
+  slug: "/text-case-converter",
+  category: "utilities",
+  description: "Convert text to uppercase, lowercase and title case.",
+  popular: true,
+},
 ];
