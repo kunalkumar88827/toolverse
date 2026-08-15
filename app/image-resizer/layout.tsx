@@ -13,3 +13,11 @@ export const metadata: Metadata = {
     "webp converter",
   ],
 };
+
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}
