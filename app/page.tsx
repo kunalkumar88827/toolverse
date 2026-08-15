@@ -3,6 +3,7 @@ import { tools } from "@/data/tools";
 import { Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { ImageIcon } from "lucide-react";
 
 
 export default function Home() {
@@ -122,7 +123,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredTools.map((tool) => {
-  const Icon = tool.icon;
+  const Icon = tool.icon || ImageIcon;
 
   return (
     <Link

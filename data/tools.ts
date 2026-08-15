@@ -6,6 +6,7 @@ import {
     FileText,
     GraduationCap,
     HeartPulse,
+    ImageIcon,
     KeyRound,
     Landmark,
     Percent,
@@ -137,4 +138,13 @@ export const tools = [
   icon: Type,
   popular: true,
 },
+{
+  name: "Image Resizer",
+  slug: "/image-resizer",
+  category: "utilities",
+  description: "Resize images online without losing quality.",
+  popular: true,
+  icon: ImageIcon,
+},
+
 ];

@@ -1,10 +1,10 @@
 "use client";
 
 import {
-    GraduationCap,
-    HeartPulse,
-    Wallet,
-    Wrench,
+  GraduationCap,
+  HeartPulse,
+  Wallet,
+  Wrench,
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -90,6 +90,11 @@ export default function Navbar() {
         name: "Text Case Converter",
         href: "/text-case-converter",
         desc: "Convert text cases",
+      },
+      {
+        name: "Image Resizer",
+        href: "/image-resizer",
+        desc: "Resize your Image",
       },
     ],
   },
