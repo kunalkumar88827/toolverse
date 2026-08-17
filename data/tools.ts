@@ -18,6 +18,38 @@ import {
 } from "lucide-react";
 
 export const tools = [
+    {
+  name: "Image Resizer",
+  slug: "/image-resizer",
+  category: "utilities",
+  description: "Resize images online without losing quality.",
+  popular: true,
+  icon: ImageIcon,
+},
+{
+  name: "QR Code Generator",
+  slug: "/qr-generator",
+  category: "utilities",
+  description: "Generate and download QR codes instantly.",
+  icon: QrCode,
+  popular: true,
+},
+{
+  name: "Word Counter",
+  slug: "/word-counter",
+  category: "utilities",
+  description: "Count words, characters and sentences instantly.",
+  icon: FileText,
+  popular: true,
+},
+{
+  name: "Text Case Converter",
+  slug: "/text-case-converter",
+  category: "utilities",
+  description: "Convert text to uppercase, lowercase and title case.",
+  icon: Type,
+  popular: true,
+},
   {
   name: "Percentage Calculator",
   slug: "/percentage-calculator",
@@ -107,44 +139,12 @@ export const tools = [
   popular: true,
 },
 {
-  name: "QR Code Generator",
-  slug: "/qr-generator",
-  category: "utilities",
-  description: "Generate and download QR codes instantly.",
-  icon: QrCode,
-  popular: true,
-},
-{
   name: "Loan Calculator",
   slug: "/loan-calculator",
   category: "finance",
   description: "Calculate loan EMI, interest and total payment.",
   icon: Calculator,
   popular: true,
-},
-{
-  name: "Word Counter",
-  slug: "/word-counter",
-  category: "utilities",
-  description: "Count words, characters and sentences instantly.",
-  icon: FileText,
-  popular: true,
-},
-{
-  name: "Text Case Converter",
-  slug: "/text-case-converter",
-  category: "utilities",
-  description: "Convert text to uppercase, lowercase and title case.",
-  icon: Type,
-  popular: true,
-},
-{
-  name: "Image Resizer",
-  slug: "/image-resizer",
-  category: "utilities",
-  description: "Resize images online without losing quality.",
-  popular: true,
-  icon: ImageIcon,
 },
 
 ];

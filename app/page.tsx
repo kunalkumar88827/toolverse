@@ -1,9 +1,8 @@
 "use client";
 import { tools } from "@/data/tools";
-import { Search } from "lucide-react";
+import { ImageIcon, Search } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { ImageIcon } from "lucide-react";
 
 
 export default function Home() {
@@ -41,16 +40,16 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-[#FFF5F5] py-6 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          {/* <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             This Website Created By,
             <span className="text-[#E5322D]"> Parnika</span>
-          </h1>
-          {/* <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          </h1> */}
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
   Every Tool You Need
   <span className="text-[#E5322D]">
     {" "}In One Place
   </span>
-</h1> */}
+</h1>
 
           <p className="text-lg text-gray-600 mb-10">
   Free calculators, finance tools, student tools,
